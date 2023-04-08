@@ -14,8 +14,13 @@ Dodatkowym celem jest wyjazd do Szwecji i szybkie podjęcie tam pracy. Co mam na
 * //input[@type="text"]
 
 2. Password
-* //input[@tpe="passwprd"]
+* //input[@type="passwprd"]
 * //*[@id="password"]
 * //*[@name="password"]
 
-3.
+3.Button
+* //*[@id="__next"]/form/div/div[2]/button/span[1]
+* //button[text()="Sign In"] ???
+
+4. English
+* //*[contains(@class, "MuiSelect-selectMenu")]
