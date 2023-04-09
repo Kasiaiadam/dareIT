@@ -18,7 +18,7 @@ Dodatkowym celem jest wyjazd do Szwecji i szybkie podjęcie tam pracy. Co mam na
 * //*[@id="password"]
 * //*[@name="password"]
 
-3.Button "sign in"
+3. Button "sign in"
 * //*[@id="__next"]/form/div/div[2]/button
 * //*[@class="MuiButtonBase-root MuiButton-root MuiButton-contained jss5 MuiButton-containedPrimary"]
 * //*[contains(@class, "MuiButton-root")]
