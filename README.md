@@ -14,7 +14,7 @@ Dodatkowym celem jest wyjazd do Szwecji i szybkie podjęcie tam pracy. Co mam na
 * //input[@type="text"]
 
 2. Password
-* //input[@type="passwprd"]
+* //input[@type="password"]
 * //*[@id="password"]
 * //*[@name="password"]
 
