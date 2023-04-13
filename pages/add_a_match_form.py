@@ -4,7 +4,7 @@ from pages.base_page import BasePage
 class add(BasePage):
     fill_in_email="//*[@name='email']"
     fill_in_name="//*[@name='name']"
-    choose_leg="//*[ @ id = 'mui-component-select-leg']"
+    choose_leg="//*[@id='mui-component-select-leg']"
     submit_button="//*[@type='submit']"
     clear_button="//*[contains(@class, 'MuiButton-containedSecondary')]"
     add_link_to_youtube="//*[@aria-label='Add link to Youtube']"
