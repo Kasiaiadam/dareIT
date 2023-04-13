@@ -4,7 +4,7 @@
 # class LoginPage(BasePage):
 #     login_field_xpath = "//*[@id='login']"
 #     password_field_xpath ="//*[@name='password']"
-#     sign_in_button_xpath ="//*[contains(@class, 'MuiButton-root')]"
+#     sign_in_button_xpath ="//*[contains(@class, 'MuiButton-root')]"    "*//button[@type='Submit']"
 #     change_language_button_xpath = "//*[text()='English']"
 #
 #     def type_in_email(self, email):
