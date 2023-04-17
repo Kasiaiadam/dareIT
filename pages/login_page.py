@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from pages.base_page import BasePage
 
 
@@ -27,16 +26,4 @@ class LoginPage(BasePage):
 
     def title_of_page(self):
         assert self.get_page_title(self.login_url) == self.expected_title
-=======
-# from pages.base_page import BasePage
-#
-#
-# class LoginPage(BasePage):
-#     login_field_xpath = "//*[@id='login']"
-#     password_field_xpath ="//*[@name='password']"
-#     sign_in_button_xpath ="//*[contains(@class, 'MuiButton-root')]"    "*//button[@type='Submit']"
-#     change_language_button_xpath = "//*[text()='English']"
-#
-#     def type_in_email(self, email):
-#         self.field_send_keys(self.login_field_xpath, email)
->>>>>>> 7441633d8ff2969b3f958cecc9bc07ef0f107aff
+
