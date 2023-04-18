@@ -26,4 +26,4 @@ class BasePage():
         """
         element = driver.find_element(by=By.XPATH, value=xpath)
         element_text = element.text
-        assert expected_text == element_text
+        assert element_text == expected_text

@@ -9,13 +9,12 @@ class LoginPage(BasePage):
     sign_in_button_xpath = "//*[@type='submit']"
     login_url = 'https://scouts-test.futbolkolektyw.pl/en'
     expected_title = 'Scouts panel - sign in'
-    title_of_box_xpath="//*[@id='__next']/form/div/div[1]/h5"
     change_language_button_xpath = "//*[text()='English']"
+    title_of_box_xpath = "//*[contains(@class, 'MuiTypography-h5')]"
     header_of_box = 'Scouts Panel'
 
-    #def __init__(self, driver: WebDriver):
-        #super().__init__(driver)
-        #self.expected_title = None
+    def title_of_box(self):
+        self.assert_element_text(self.driver, self.title_of_box_xpath, self.header_of_box)
 
     def type_in_email(self, email):
         self.field_send_keys(self.login_field_xpath, email)
@@ -29,6 +28,6 @@ class LoginPage(BasePage):
     def title_of_page(self):
         assert self.get_page_title(self.login_url) == self.expected_title
 
-    def title_of_box(self):
-        self.assert_element_text(self.driver, self.title_of_box_xpath, self.expected_title)
+
+
 
