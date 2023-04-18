@@ -1,4 +1,6 @@
 from pages.base_page import BasePage
+from selenium.webdriver.common.by import By
+from selenium.webdriver.remote.webdriver import WebDriver
 
 
 class LoginPage(BasePage):
@@ -27,6 +29,6 @@ class LoginPage(BasePage):
     def title_of_page(self):
         assert self.get_page_title(self.login_url) == self.expected_title
 
-    def title_of_box(selfself):
-        assert self.
+    def title_of_box(self):
+        self.assert_element_text(self.driver, self.title_of_box_xpath, self.expected_title)
 
