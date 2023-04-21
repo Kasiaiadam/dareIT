@@ -4,7 +4,7 @@ from pages.dashboard import Dashboard
 
 
 class AddPlayer(BasePage):
-    add_player_xpath = "//*[@id='__next']/div[1]/main/div[3]/div[2]/div/div/a/button"
+
     fill_in_email="//*[@name='email']"
     fill_in_name="//*[@name='name']"
     choose_leg="//*[ @ id = 'mui-component-select-leg']"
@@ -21,9 +21,6 @@ class AddPlayer(BasePage):
     # def __init__(self, driver: WebDriver):
     # super().__init__(driver)
     # self.add_player_xpath = None
-
-    def click_on_the_add_player(self):
-        self.click_on_the_element(self.add_player_xpath)
 
     def title_of_page(self):
         assert self.get_page_title(self.add_player_url) == self.expected_title
