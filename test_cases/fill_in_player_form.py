@@ -9,6 +9,7 @@ from pages.dashboard import Dashboard
 from pages.login_page import LoginPage
 from pages.add_a_player import AddPlayer
 
+
 class TestFillForm(unittest.TestCase):
 
     @classmethod
@@ -18,7 +19,7 @@ class TestFillForm(unittest.TestCase):
         self.driver.get('https://scouts-test.futbolkolektyw.pl/en')
         self.driver.fullscreen_window()
         self.driver.implicitly_wait(IMPLICITLY_WAIT)
-        super(TestFillForm, self).setUp(self)
+        # super(TestFillForm, self).setUp(self)
 
     def test_fill_in_player_form(self):
         TestLoginPage.test_login_to_the_system(self)
@@ -31,9 +32,11 @@ class TestFillForm(unittest.TestCase):
         add_player.type_in_phone('123456')
         add_player.type_in_weight('80kg')
         add_player.type_in_height('180')
+        add_player.type_in_age('01.01.2001')
         add_player.type_in_main_position('Napastnik')
         add_player.click_add_link_to_youtube()
-        add_player.type_in_youtube_link('https://www.youtube.com/watch?v=Go-jJlGd1so&pp=ygUheW91IHdpbGwgbmV2ZXIgd2FsayBhbG9uZSBhbmZpZWxk')
+        add_player.type_in_youtube_link(
+            'https://www.youtube.com/watch?v=Go-jJlGd1so&pp=ygUheW91IHdpbGwgbmV2ZXIgd2FsayBhbG9uZSBhbmZpZWxk')
         add_player.type_in_main_club('Liverpool')
         add_player.type_in_level('Advanced')
         add_player.type_in_achievements('brak')
@@ -42,10 +45,12 @@ class TestFillForm(unittest.TestCase):
         add_player.type_in_language('English')
         add_player.click_on_the_choose_leg_button()
         add_player.click_on_the_right_leg()
+        add_player.click_on_the_choose_district()
+        add_player.choose_district()
         time.sleep(5)
 
-    def test_submit_form(self):
-        add_player = AddPlayer(self.driver)
+    #def test_submit_form(self):
+        #submit = AddPlayer(self.driver)
         add_player.click_on_the_submit()
 
     @classmethod
