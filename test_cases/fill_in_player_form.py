@@ -19,7 +19,7 @@ class TestFillForm(unittest.TestCase):
         self.driver.get('https://scouts-test.futbolkolektyw.pl/en')
         self.driver.fullscreen_window()
         self.driver.implicitly_wait(IMPLICITLY_WAIT)
-        # super(TestFillForm, self).setUp(self)
+        super(TestFillForm, self).setUp(self)
 
     def test_fill_in_player_form(self):
         TestLoginPage.test_login_to_the_system(self)
@@ -49,13 +49,10 @@ class TestFillForm(unittest.TestCase):
         add_player.choose_district()
         time.sleep(5)
 
-    #def test_submit_form(self):
-        #submit = AddPlayer(self.driver)
-        add_player.click_on_the_submit()
+    # def test_submit(self):
+        # submit = AddPlayer(self.driver)
+        # submit.click_on_the_submit()
 
     @classmethod
     def tearDown(self):
         self.driver.quit()
-
-
-pass

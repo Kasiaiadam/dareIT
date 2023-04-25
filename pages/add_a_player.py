@@ -14,8 +14,8 @@ class AddPlayer(BasePage):
     fill_in_weight_xpath = "(//*[@type='number'])[1]"
     fill_in_height_xpath = "(//*[@type='number'])[2]"
     main_position_xpath = "//*[@name='mainPosition']"
-    choose_district_xpath = "//*[@name='district']"
-    district_xpath = "//*[@data-value='Lublin']"
+    choose_district_xpath = "//*[@id='mui-component-select-district']"
+    district_xpath = "//*[@data-value='lubelskie']"
     add_player_url = 'https://scouts-test.futbolkolektyw.pl/en/players/add'
     expected_title = 'Add player'
     fill_in_club_xpath = "//*[@name='club']"
@@ -44,7 +44,7 @@ class AddPlayer(BasePage):
         self.click_on_the_element(self.clear_button_xpath)
 
     def title_of_page(self):
-        assert self.get_page_title(self.add_player_url) == self.expected_title
+        assert self.get_page_title() == self.expected_title
 
     def type_in_age(self, age):
         self.field_send_keys(self.choose_age_xpath, age)
@@ -72,9 +72,6 @@ class AddPlayer(BasePage):
 
     def type_in_main_position(self, position):
         self.field_send_keys(self.main_position_xpath, position)
-
-    def click_on_the_choose_district(self):
-        self.click_on_the_element(self.choose_district_xpath)
 
     def click_add_link_to_youtube(self):
         self.click_on_the_element(self.add_link_to_youtube_xpath)

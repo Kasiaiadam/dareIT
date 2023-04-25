@@ -2,13 +2,10 @@ import os
 import unittest
 from selenium import webdriver
 import time
-
 from test_cases.fill_in_player_form import TestFillForm
-from test_cases.login_to_the_system import TestLoginPage
 from utils.settings import DRIVER_PATH, IMPLICITLY_WAIT
-from pages.dashboard import Dashboard
-from pages.login_page import LoginPage
 from pages.add_a_player import AddPlayer
+
 
 class TestClearForm(unittest.TestCase):
 
@@ -29,6 +26,3 @@ class TestClearForm(unittest.TestCase):
     @classmethod
     def tearDown(self):
         self.driver.quit()
-
-
-pass

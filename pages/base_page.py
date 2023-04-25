@@ -19,8 +19,8 @@ class BasePage():
     def click_on_the_element(self, selector, selector_type=By.XPATH):
         return self.driver.find_element(selector_type, selector).click()
 
-    def get_page_title(self, url):
-        self.driver.get(url)
+    def get_page_title(self):  # url):
+        # self.driver.get(url)
         return self.driver.title
 
     def assert_element_text(self, driver, xpath, expected_text):
@@ -34,7 +34,11 @@ class BasePage():
         element_text = element.text
         assert expected_text == element_text
 
-    def wait_for_the_element(self, locator, locator_type=DEFAULT_LOCATOR_TYPE):
+    def wait_for_the_element_to_be_clickable(self, locator, locator_type=DEFAULT_LOCATOR_TYPE):
         wait = WebDriverWait(self.driver, 10)
         element = wait.until(EC.element_to_be_clickable((locator_type, locator)))
-        #time.sleep(3)
+
+    def wait_for_visibility_of_element_located(self, locator, locator_type=DEFAULT_LOCATOR_TYPE):
+        wait = WebDriverWait(self.driver, 10)
+        element = wait.until(EC.visibility_of_element_located((locator_type, locator)))
+    # time.sleep(3)
