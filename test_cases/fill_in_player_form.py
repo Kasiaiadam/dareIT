@@ -51,7 +51,7 @@ class TestFillForm(unittest.TestCase):
 
     # def test_submit(self):
         # submit = AddPlayer(self.driver)
-        # submit.click_on_the_submit()
+        # add_player.click_on_the_submit()
 
     @classmethod
     def tearDown(self):

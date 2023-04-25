@@ -10,8 +10,8 @@ class Dashboard(BasePage):
     dev_team_contact = "//a[contains(@href, 'client')]"
     # add_player_xpath = "//*div[2]/div/div/a/button"
     sign_out_xpath = "//*[@id='__next']/div[1]/div/div/div/ul[2]/div[2]"
-    choose_language = "//*[@id='__next']/div[1]/div/div/div/ul[2]/div[1]"
-    players = "//*[@id='__next']/div[1]/div/div/div/ul[1]/div[2]"
+    choose_language_xpath = "//*[@id='__next']/div[1]/div/div/div/ul[2]/div[1]"
+    players_xpath = "//*[@id='__next']/div[1]/div/div/div/ul[1]/div[2]"
     go_to_last_created_player = "//*[@id='__next']/div[1]/main/div[3]/div[3]/div/div/a[1]"
     go_to_last_updated_player = "//*[@id='__next']/div[1]/main/div[3]/div[3]/div/div/a[2]"
     go_to_last_created_match = "//*[@id='__next']/div[1]/main/div[3]/div[3]/div/div/a[3]"
@@ -19,6 +19,7 @@ class Dashboard(BasePage):
     expected_title = "Scouts panel"
     dashboard_url = 'https://scouts-test.futbolkolektyw.pl/en'
     add_player_xpath = "//*[@id='__next']/div[1]/main/div[3]/div[2]/div/div/a/button"
+    download_csv_xpath = "//*[@aria-label='Download CSV']"
     wait = WebDriverWait(driver, 10)
 
     def title_of_page(self):
@@ -30,3 +31,10 @@ class Dashboard(BasePage):
 
     def click_on_the_signout_button(self):
         self.click_on_the_element(self.sign_out_xpath)
+
+    def click_on_the_change_language_button(self):
+        self.click_on_the_element(self.choose_language_xpath)
+
+    def click_on_the_players_button(self):
+        self.click_on_the_element(self.players_xpath)
+
