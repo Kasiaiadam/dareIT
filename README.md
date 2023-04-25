@@ -27,3 +27,6 @@ Dodatkowym celem jest wyjazd do Szwecji i szybkie podjęcie tam pracy. Co mam na
 * //*[contains(@class, "MuiSelect-selectMenu")]
 * //*[text()="English"]
 * /html/body/div/form/div/div[2]/div/div
+
+# Zadanie 4
+Link do folderu na google drive: https://drive.google.com/drive/folders/1DL2wA7zvczSsKRSMs0-sYwYGH59kGL6-?usp=sharing
