@@ -21,6 +21,8 @@ class Dashboard(BasePage):
     add_player_xpath = "//*[@id='__next']/div[1]/main/div[3]/div[2]/div/div/a/button"
     download_csv_xpath = "//*[@aria-label='Download CSV']"
     wait = WebDriverWait(driver, 10)
+    expected_player_name = 'Marian Drozd'
+    check_last_player_name_xpath = '//*[@id="__next"]/div[1]/main/div[3]/div[3]/div/div/a[1]/button/span[1]'
 
     def title_of_page(self):
         self.wait_for_the_element_to_be_clickable(self.futbol_kolektyw_button_xpath)
@@ -38,3 +40,6 @@ class Dashboard(BasePage):
     def click_on_the_players_button(self):
         self.click_on_the_element(self.players_xpath)
 
+    def last_added_player(self):
+        self.wait_for_the_element_to_be_clickable(self.futbol_kolektyw_button_xpath)
+        assert self.check_last_player_name_xpath == self.expected_player_name

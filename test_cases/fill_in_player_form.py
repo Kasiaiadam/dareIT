@@ -1,5 +1,7 @@
 import os
 import unittest
+from tkinter import Image
+
 from selenium import webdriver
 import time
 
@@ -13,7 +15,7 @@ from pages.add_a_player import AddPlayer
 class TestFillForm(unittest.TestCase):
 
     @classmethod
-    def setUpClass(self):
+    def setUp(self):
         os.chmod(DRIVER_PATH, 755)
         self.driver = webdriver.Chrome(executable_path=DRIVER_PATH)
         self.driver.get('https://scouts-test.futbolkolektyw.pl/en')
@@ -47,11 +49,18 @@ class TestFillForm(unittest.TestCase):
         add_player.click_on_the_right_leg()
         add_player.click_on_the_choose_district()
         add_player.choose_district()
-        time.sleep(5)
+        # self.driver.save_screenshot("C:\Users\User\Documents\GitHub\dareIT\test_cases\screenshots\player_added.png")
+        # Image.open("C:\Users\User\Documents\GitHub\dareIT\test_cases\screenshots\player_added.png").show()
 
-    # def test_submit(self):
+        # def test_submit(self):
         # submit = AddPlayer(self.driver)
-        # add_player.click_on_the_submit()
+        add_player.click_on_the_submit()
+        add_player.click_on_the_main_page()
+
+
+        # def check_if_saved(self):
+        check = Dashboard(self.driver)
+        check.last_added_player()
 
     @classmethod
     def tearDown(self):

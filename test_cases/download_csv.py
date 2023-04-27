@@ -26,9 +26,6 @@ class TestDownloadCSV(unittest.TestCase):
         download_list_of_the_players.click_on_the_download_csv_button()
         time.sleep(2)
 
-
-
-
     @classmethod
     def tearDown(self):
         self.driver.quit()

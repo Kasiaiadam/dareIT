@@ -11,7 +11,7 @@ from utils.settings import DRIVER_PATH, IMPLICITLY_WAIT
 class TestLoginPage(unittest.TestCase):
 
     @classmethod
-    def setUpClass(self):
+    def setUp(self):
         os.chmod(DRIVER_PATH, 755)
         self.driver = webdriver.Chrome(executable_path=DRIVER_PATH)
         self.driver.get("https://scouts-test.futbolkolektyw.pl/en")
@@ -21,12 +21,12 @@ class TestLoginPage(unittest.TestCase):
 
     def test_login_to_the_system(self):
         user_login = LoginPage(self.driver)
-        user_login.title_of_page()
-        user_login.title_of_box()
         user_login.type_in_email('user02@getnada.com')
         user_login.type_in_password('Test-1234')
+        user_login.title_of_page()
+        user_login.title_of_box()
         user_login.click_on_the_sign_in_button()
-        # time.sleep(2)
+        time.sleep(2)
 
     # def test_title_of_dashboard_page(self):
         dashboard_page = Dashboard(self.driver)

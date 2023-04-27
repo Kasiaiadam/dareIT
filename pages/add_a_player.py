@@ -29,10 +29,13 @@ class AddPlayer(BasePage):
     fill_in_language_xpath = "//*[@name='languages[0]']"
     left_leg_xpath = "//*[@data-value='left']"
     right_leg_xpath = "//*[@data-value='right']"  # spróbuj inaczej !!!
+    main_page_button_xpath = "//ul[1]/div[1]"
 
     # def __init__(self, driver: WebDriver):
     # super().__init__(driver)
     # self.add_player_xpath = None
+    def click_on_the_main_page(self):
+        self.click_on_the_element(self.main_page_button_xpath)
 
     def click_on_the_choose_district(self):
         self.click_on_the_element(self.choose_district_xpath)
