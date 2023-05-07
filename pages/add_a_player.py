@@ -16,7 +16,7 @@ class AddPlayer(BasePage):
     main_position_xpath = "//*[@name='mainPosition']"
     choose_district_xpath = "//*[@id='mui-component-select-district']"
     district_xpath = "//*[@data-value='lubelskie']"
-    add_player_url = 'https://scouts-test.futbolkolektyw.pl/en/players/add'
+    add_player_url = 'https://scouts.futbolkolektyw.pl/en/players/add'
     expected_title = 'Add player'
     fill_in_club_xpath = "//*[@name='club']"
     fill_in_second_position_xpath = "//*[@name='secondPosition']"

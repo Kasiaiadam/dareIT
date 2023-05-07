@@ -17,7 +17,7 @@ class Dashboard(BasePage):
     go_to_last_created_match = "//*[@id='__next']/div[1]/main/div[3]/div[3]/div/div/a[3]"
     go_to_last_updated_report = "//*[@id='__next']/div[1]/main/div[3]/div[3]/div/div/a[5]"
     expected_title = "Scouts panel"
-    dashboard_url = 'https://scouts-test.futbolkolektyw.pl/en'
+    dashboard_url = 'https://scouts.futbolkolektyw.pl/en'
     add_player_xpath = "//*[@id='__next']/div[1]/main/div[3]/div[2]/div/div/a/button"
     download_csv_xpath = "//*[@aria-label='Download CSV']"
     wait = WebDriverWait(driver, 10)
