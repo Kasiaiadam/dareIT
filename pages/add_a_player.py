@@ -30,11 +30,14 @@ class AddPlayer(BasePage):
     left_leg_xpath = "//*[@data-value='left']"
     right_leg_xpath = "//*[@data-value='right']"  # spróbuj inaczej !!!
     main_page_button_xpath = "//ul[1]/div[1]"
+    success_container_xpath = "//*[@id='__next']/div[2]/div"
+    previous_club_xpath = "//*[@name='exClub']"
 
     # def __init__(self, driver: WebDriver):
     # super().__init__(driver)
     # self.add_player_xpath = None
     def click_on_the_main_page(self):
+        #self.wait_for_visibility_of_element_located(self.success_container_xpath)
         self.click_on_the_element(self.main_page_button_xpath)
 
     def click_on_the_choose_district(self):
@@ -51,6 +54,9 @@ class AddPlayer(BasePage):
 
     def type_in_age(self, age):
         self.field_send_keys(self.choose_age_xpath, age)
+
+    def type_in_exclub(self, previousclub):
+        self.field_send_keys(self.previous_club_xpath, previousclub)
 
     def type_in_email(self, email):
         self.field_send_keys(self.fill_in_email_xpath, email)

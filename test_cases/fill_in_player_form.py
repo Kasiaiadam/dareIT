@@ -49,16 +49,13 @@ class TestFillForm(unittest.TestCase):
         add_player.click_on_the_right_leg()
         add_player.click_on_the_choose_district()
         add_player.choose_district()
+        add_player.type_in_exclub('brak')
         # self.driver.save_screenshot("C:\Users\User\Documents\GitHub\dareIT\test_cases\screenshots\player_added.png")
         # Image.open("C:\Users\User\Documents\GitHub\dareIT\test_cases\screenshots\player_added.png").show()
 
-        # def test_submit(self):
-        # submit = AddPlayer(self.driver)
         add_player.click_on_the_submit()
         add_player.click_on_the_main_page()
 
-
-        # def check_if_saved(self):
         check = Dashboard(self.driver)
         check.last_added_player()
 

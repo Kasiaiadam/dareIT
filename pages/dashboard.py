@@ -5,7 +5,7 @@ from pages.base_page import BasePage
 
 
 class Dashboard(BasePage):
-    futbol_kolektyw_button_xpath = '//*[@title="Logo Scouts Panel"]'
+    futbol_kolektyw_button_xpath = '//*[@title="Logo PANEL SKAUTINGOWY"]'
     main_page_button = "//*[text()='Main page']"
     dev_team_contact = "//a[contains(@href, 'client')]"
     # add_player_xpath = "//*div[2]/div/div/a/button"
@@ -21,8 +21,12 @@ class Dashboard(BasePage):
     add_player_xpath = "//*[@id='__next']/div[1]/main/div[3]/div[2]/div/div/a/button"
     download_csv_xpath = "//*[@aria-label='Download CSV']"
     wait = WebDriverWait(driver, 10)
-    expected_player_name = 'Marian Drozd'
+    expected_player_name = 'MARIAN DROZD'
     check_last_player_name_xpath = '//*[@id="__next"]/div[1]/main/div[3]/div[3]/div/div/a[1]/button/span[1]'
+    text_players_xpath='//*[@id="__next"]/div[1]/div/div/div/ul[1]/div[2]/div[2]/span'
+
+    def find_element(XPATH, text_players_xpath):
+        pass
 
     def title_of_page(self):
         self.wait_for_the_element_to_be_clickable(self.futbol_kolektyw_button_xpath)
