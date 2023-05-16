@@ -7,7 +7,7 @@ class LoginPage(BasePage):
     login_field_xpath = "//*[@id='login']"
     password_field_xpath = "//*[@name='password']"
     sign_in_button_xpath = "//*[@type='submit']"
-    login_url = 'https://scouts-test.futbolkolektyw.pl/en/login'
+    login_url = 'https://scouts.futbolkolektyw.pl/en/login'
     expected_title = "Scouts panel - sign in"
     change_language_button_xpath = "//*[@class='MuiSelect-nativeInput']"
     title_of_box_xpath = "//*[contains(@class, 'MuiTypography-h5')]"
@@ -27,5 +27,3 @@ class LoginPage(BasePage):
 
     def title_of_page(self):
         assert self.get_page_title() == self.expected_title
-
-
